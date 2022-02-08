@@ -48,7 +48,7 @@ FieldBus.register(fbHandle, 'OnNewData', handleOnNewData)
 ----------------------------------------------------------------------
 local function handleOnControlBitsOutChanged(data)
   print('Control Bits Out (from PLC):' .. data)
-  -- Tranmit the received data back to the PLC within the ControlBitsIn
+  -- Transmit the received data back to the PLC within the ControlBitsIn
   FieldBus.writeControlBitsIn(fbHandle, data, 0xFFFF)
 end
 -- OnControlBitsOutChanged will be triggered after the control bits on the PLC have been changed
